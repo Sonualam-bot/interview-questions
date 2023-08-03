@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Calculator.css"
+import { Header } from "../../Header/Header";
 export const Calculator = () => {
     const [sum, setSum] = useState(0);
     const [num, setNum] = useState({
@@ -57,39 +58,40 @@ export const Calculator = () => {
 
     return (
         <>
+            <Header />
             <h3>This is calculator</h3>
 
             <h2> Total : {operation} </h2>
 
-            <div className="inputBoxes">
-                <input
-                    type="number"
-                    placeholder="Enter Num 1
-        "
-                    name="num1"
-                    value={num.num1}
-                    onChange={handleUserInput}
-                />
-                <p> {sign} </p>
-                <input
-                    type="number"
-                    placeholder="Enter Num 2
-        "
-                    name="num2"
-                    value={num.num2}
-                    onChange={handleUserInput}
-                />
-            </div>
-            <div className="btn">
-                <button onClick={handleSum}> + </button>
-                <button onClick={handleSubtract}> - </button>
-                <button onClick={multiply}> X </button>
-                <button onClick={division}> / </button>
-            </div>
-            <div className="bottomDIv">
-                <button onClick={handleResetBtn}>Reset</button>
-                {show && <p> Result : {sum} </p>}
-            </div>
+            <idv className="calculatorContainer">
+                <div className="inputBoxes">
+                    <input
+                        type="number"
+                        placeholder="Enter Num 1"
+                        name="num1"
+                        value={num.num1}
+                        onChange={handleUserInput}
+                    />
+                    <p> {sign} </p>
+                    <input
+                        type="number"
+                        placeholder="Enter Num 2"
+                        name="num2"
+                        value={num.num2}
+                        onChange={handleUserInput}
+                    />
+                </div>
+                <div className="btn">
+                    <button className="buttonsCalculator" onClick={handleSum}> + </button>
+                    <button className="buttonsCalculator" onClick={handleSubtract}> - </button>
+                    <button className="buttonsCalculator" onClick={multiply}> X </button>
+                    <button className="buttonsCalculator" onClick={division}> / </button>
+                </div>
+                <div className="bottomDIv">
+                    <button className="resetBtn" onClick={handleResetBtn}>Reset</button>
+                    {show && <p> Result : {sum} </p>}
+                </div>
+            </idv>
         </>
     );
 };

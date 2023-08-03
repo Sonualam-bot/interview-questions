@@ -1,3 +1,10 @@
+.tableColorContainer {
+  border: 1px solid grey;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .tableDiv {
   border: 1px solid black;
   height: 50px;
@@ -12,11 +19,12 @@
   margin: 0 auto;
 }
 
-input {
+.colorInput {
   padding: 0.5rem;
   margin: 1.1rem;
   border-radius: 10px;
   outline: none;
+  width: 200px;
 }
 
 .colouredBox {
@@ -31,8 +39,9 @@ input {
   margin: 1.5rem;
 }
 
-.buttonContainer button {
+.tableColorBtn {
   padding: 0.5rem;
   border: 1px solid grey;
   border-radius: 10px;
+  width: 90px;
 }

@@ -2,6 +2,7 @@ import { useState } from "react"
 import { AiOutlineStar } from "react-icons/ai"
 
 import "./Rating.css"
+import { Header } from "../../Header/Header"
 
 export const Rating = () => {
 
@@ -20,13 +21,14 @@ export const Rating = () => {
 
     return (
         <>
+            <Header />
             <div className="star-rating" >
                 {[...Array(5)].map((star, index) => {
                     index += 1
                     return (
-                        <button
+                        <div
                             key={index}
-                            type="button"
+                            // type="button"
                             className={index <= (hover || rating) ? "on" : "off"}
                             onClick={() => handleRatingClick(index)}
                             onMouseEnter={() => setHover(index)}
@@ -35,7 +37,7 @@ export const Rating = () => {
                             }
                         >
                             <span className="star" > <AiOutlineStar /> </span>
-                        </button>
+                        </div>
 
                     )
                 })}

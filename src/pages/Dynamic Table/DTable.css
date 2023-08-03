@@ -14,7 +14,7 @@ button {
   width: 60%;
   border: 1px solid grey;
   padding: 0.35rem;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .outputDiv {
@@ -34,4 +34,11 @@ table td {
   border: 1px solid black;
   padding: 4px;
   text-align: center;
+}
+
+.formDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }

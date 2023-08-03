@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./DTable.css"
 import { NewTable } from "./NewTable"
+import { Header } from "../../Header/Header"
 
 export const DTable = () => {
     const [rows, setRows] = useState("")
@@ -17,11 +18,12 @@ export const DTable = () => {
 
     return (
         <>
+            <Header />
             <h2>TaBLE</h2>
 
 
             <div className="formParentContainer" >
-                <form onSubmit={(e) => handleUserInput(e)} >
+                <form onSubmit={(e) => handleUserInput(e)} className="formDetails" >
                     <div className="formContainer" >
                         <label htmlFor="rows">Enter Number of Rows</label>
                         <input type="number" name="rows" id="rows" min={1} />
