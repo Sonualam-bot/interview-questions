@@ -1,0 +1,38 @@
+.tableDiv {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+}
+
+.tableContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 150px;
+  margin: 0 auto;
+}
+
+input {
+  padding: 0.5rem;
+  margin: 1.1rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+.colouredBox {
+  background-color: red;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem;
+}
+
+.buttonContainer button {
+  padding: 0.5rem;
+  border: 1px solid grey;
+  border-radius: 10px;
+}

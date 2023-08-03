@@ -1,0 +1,17 @@
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: gold;
+  overflow: hidden;
+}
+.off {
+  color: #ccc;
+}
+
+.star {
+  font-size: 1.5rem;
+}

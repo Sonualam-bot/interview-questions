@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { Route, Routes } from "react-router";
 import './App.css';
+
+import { Header } from "./Header/Header";
+import { Rating } from "./pages/Rating/Rating"
+// import { Homepage } from "./pages/Homepage";
+import { Calculator } from "./pages/calculator/Calculator";
+import { Table } from "./pages/table-colorizer/Table";
+import { DTable } from "./pages/Dynamic Table/DTable";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Header />
+
+      <Routes>
+        {/* <Route path="/" element={<Homepage />} /> */}
+        <Route path="/rating" element={<Rating />} />
+        <Route path="/calculator" element={<Calculator />} />
+        <Route path="/tableColorizer" element={<Table />} />
+        <Route path="/dtable" element={<DTable />} />
+      </Routes>
     </div>
   );
 }
